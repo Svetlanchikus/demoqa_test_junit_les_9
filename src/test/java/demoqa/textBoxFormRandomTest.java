@@ -1,7 +1,7 @@
 package demoqa;
 
-import demoqa.pages.TextBoxFormPage;
-import demoqa.utils.RandomUtils;
+import demoqa.pages.textBoxFormPage;
+import demoqa.utils.randomUtils;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.*;
@@ -9,9 +9,10 @@ import org.junit.jupiter.params.provider.*;
 
 import java.util.stream.Stream;
 
-public class TextBoxFormTest extends TestBase {
-    TextBoxFormPage textBoxFormPage = new TextBoxFormPage();
-    static RandomUtils randomUtils = new RandomUtils();
+public class textBoxFormRandomTest extends testBase {
+    demoqa.pages.textBoxFormPage textBoxFormPage = new textBoxFormPage();
+    static demoqa.utils.randomUtils randomUtils = new randomUtils();
+
     static Stream<Arguments> methodSourceExampleTest() {
         return Stream.of(
                 Arguments.of(randomUtils.getFullName(), randomUtils.getEmail(), randomUtils.getCurrentAddress(), randomUtils.getPermanentAddress()),

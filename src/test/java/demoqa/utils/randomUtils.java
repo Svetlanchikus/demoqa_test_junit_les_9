@@ -2,7 +2,7 @@ package demoqa.utils;
 
 import com.github.javafaker.Faker;
 
-public class RandomUtils {
+public class randomUtils {
     Faker faker = new Faker();
 
     public String getFullName() {

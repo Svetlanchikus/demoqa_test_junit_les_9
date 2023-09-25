@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TextBoxFormPage {
+public class textBoxFormPage {
 
     SelenideElement
             formTitle = $(".main-header"),
@@ -20,67 +20,67 @@ public class TextBoxFormPage {
             permanentAddressOutput = $("#output #permanentAddress");
 
 
-    public TextBoxFormPage openPage() {
+    public textBoxFormPage openPage() {
         open("/text-box");
 
         return this;
     }
 
-    public TextBoxFormPage checkThatTheSiteHasOpened(String header) {
+    public textBoxFormPage checkThatTheSiteHasOpened(String header) {
         formTitle.shouldHave(text(header));
 
         return this;
     }
 
-    public TextBoxFormPage setFullName(String value) {
+    public textBoxFormPage setFullName(String value) {
         fullNameInput.setValue(value);
 
         return this;
     }
 
-    public TextBoxFormPage setEmail(String value) {
+    public textBoxFormPage setEmail(String value) {
         emailInput.setValue(value);
 
         return this;
     }
 
-    public TextBoxFormPage setCurrentAddress(String value) {
+    public textBoxFormPage setCurrentAddress(String value) {
         currentAddressInput.setValue(value);
 
         return this;
     }
 
-    public TextBoxFormPage setPermanentAddress(String value) {
+    public textBoxFormPage setPermanentAddress(String value) {
         permanentAddressInput.setValue(value);
 
         return this;
     }
 
-    public TextBoxFormPage clickSubmit() {
+    public textBoxFormPage clickSubmit() {
         buttonSubmit.click();
 
-        return new TextBoxFormPage();
+        return new textBoxFormPage();
     }
 
-    public TextBoxFormPage checkValueFullNameOutput(String value) {
+    public textBoxFormPage checkValueFullNameOutput(String value) {
         fullNameOutput.shouldHave(text(value));
 
         return this;
     }
 
-    public TextBoxFormPage checkValueEmailOutput(String value) {
+    public textBoxFormPage checkValueEmailOutput(String value) {
         emailOutput.shouldHave(text(value));
 
         return this;
     }
 
-    public TextBoxFormPage checkValueCurrentAddressOutput(String value) {
+    public textBoxFormPage checkValueCurrentAddressOutput(String value) {
         currentAddressOutput.shouldHave(text(value));
 
         return this;
     }
 
-    public TextBoxFormPage checkValuePermanentAddressOutput(String value) {
+    public textBoxFormPage checkValuePermanentAddressOutput(String value) {
         permanentAddressOutput.shouldHave(text(value));
 
         return this;
