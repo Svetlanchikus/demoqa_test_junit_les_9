@@ -1,7 +1,7 @@
 package demoqa;
 
-import demoqa.pages.textBoxFormPage;
-import demoqa.utils.randomUtils;
+import demoqa.pages.TextBoxFormPage;
+import demoqa.utils.RandomUtils;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.*;
@@ -9,9 +9,9 @@ import org.junit.jupiter.params.provider.*;
 
 import java.util.stream.Stream;
 
-public class textBoxFormRandomTest extends testBase {
-    demoqa.pages.textBoxFormPage textBoxFormPage = new textBoxFormPage();
-    static demoqa.utils.randomUtils randomUtils = new randomUtils();
+public class TextBoxFormRandomTest extends TestBase {
+    TextBoxFormPage textBoxFormPage = new TextBoxFormPage();
+    static RandomUtils randomUtils = new RandomUtils();
 
     static Stream<Arguments> methodSourceExampleTest() {
         return Stream.of(
@@ -28,7 +28,7 @@ public class textBoxFormRandomTest extends testBase {
     @MethodSource("methodSourceExampleTest")
     @DisplayName("Checking the filling of input fields")
     @ParameterizedTest(name = "{0} is specified for the full name, {1} is specified for the email, {2} is specified for the current address, {3} is specified for the actual residential address")
-    void FieldFillingTest(String fullName, String email, String currentAddress, String permanentAddress) {
+    void fieldFillingTest(String fullName, String email, String currentAddress, String permanentAddress) {
         textBoxFormPage
                 .openPage()
                 .checkThatTheSiteHasOpened("Text Box")
